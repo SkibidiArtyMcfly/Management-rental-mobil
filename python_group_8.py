@@ -78,3 +78,5 @@ def gantikan_mobil_rusak():
 gantikan_mobil_rusak()
 
 print(df)
+
+print("Skibidi")
