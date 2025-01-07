@@ -53,11 +53,6 @@ status_mapping = {
     4: "Sedang Mekanik"
 }
 
-'''from prettytable import PrettyTable
-tabelMobil = PrettyTable(["ID", "Nama Mobil", "Tipe Mobil", "Status Mobil", "Customer ID"])
-for index, row in df.iterrows():
-     tabelMobil.add_row([row['ID_Mobil'], row['Nama_Mobil'], tipe_mobil_mapping[row['Tipe_Mobil']], status_mapping[row['Status_Mobil']], row['Customer_ID']])
-print(tabelMobil)'''
 
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
 
@@ -83,11 +78,3 @@ def gantikan_mobil_rusak():
 gantikan_mobil_rusak()
 
 print(df)
-
-''' def tabelData():
-  tabelMobil = PrettyTable(["ID", "Nama Mobil", "Tipe Mobil", "Status Mobil", "Customer ID"])
-  for index, row in df.iterrows():
-     tabelMobil.add_row([row['ID_Mobil'], row['Nama_Mobil'], tipe_mobil_mapping[row['Tipe_Mobil']], status_mapping[row['Status_Mobil']], row['Customer_ID']])
-  print(tabelMobil)'''
-
-'''tabelData()'''
