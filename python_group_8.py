@@ -76,4 +76,5 @@ def gantikan_mobil_rusak():
             print("tidak ada mobil pengganti")
 
 gantikan_mobil_rusak()
-st.button("View Mobil", type="primary")
+if st.button("View Mobil", type="primary"):
+    st.table(df)
