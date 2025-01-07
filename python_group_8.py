@@ -80,5 +80,5 @@ if st.button("View Mobil", type="primary"):
     st.table(df)
 if st.button("Refresh Table", type="primary"):
     
-    st.write(gantikan_mobil_rusak() + "table refreshed")
+    st.write(gantikan_mobil_rusak())
     
