@@ -23,7 +23,7 @@ data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",
      [10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]
 
 df = pd.DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customer_ID'])
-print(df)
+st.table(df)
 
 lokasi_mapping = {
     1: "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
@@ -76,4 +76,3 @@ def gantikan_mobil_rusak():
             print("tidak ada mobil pengganti")
 
 gantikan_mobil_rusak()
-st.table(df)
