@@ -9,7 +9,6 @@ Original file is located at
 
 import numpy as np
 import pandas as pd
-import seaborn as sns
 import random
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
