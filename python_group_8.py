@@ -79,6 +79,6 @@ def gantikan_mobil_rusak():
 if st.button("View Mobil", type="primary"):
     st.table(df)
 if st.button("Refresh Table", type="primary"):
-    st.gantikan_mobilrusak()
+    gantikan_mobilrusak()
     st.write("Table Refresed")
     
