@@ -76,7 +76,4 @@ def gantikan_mobil_rusak():
             print("tidak ada mobil pengganti")
 
 gantikan_mobil_rusak()
-
-print(df)
-
-print("Skibidi")
+st.table(df)
