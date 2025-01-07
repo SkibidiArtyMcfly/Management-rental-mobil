@@ -75,7 +75,7 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
      
-
+gantikan_mobil_rusak()
 if st.button("View Mobil"):
     st.dataframe(df)
 st.button("Refresh Table", on_click=gantikan_mobil_rusak)
