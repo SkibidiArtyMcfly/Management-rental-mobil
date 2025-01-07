@@ -78,4 +78,4 @@ def gantikan_mobil_rusak():
 if st.button("View Mobil"):
     st.dataframe(df)
 if st.button("Refresh Table"):
-    st.write(gantikan_mobil_rusak(df))
+    st.write(gantikan_mobil_rusak('df'))
