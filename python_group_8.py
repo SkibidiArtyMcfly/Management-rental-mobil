@@ -77,8 +77,8 @@ def gantikan_mobil_rusak():
      
 
 
-if st.button("View Mobil", type="primary"):
+if st.button("View Mobil"):
 
     st.dataframe(df)
-if st.button("Refresh Table", type="primary"):
+if st.button("Refresh Table"):
     gantikan_mobil_rusak()
