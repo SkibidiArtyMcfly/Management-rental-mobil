@@ -80,5 +80,4 @@ def gantikan_mobil_rusak():
 if st.button("View Mobil"):
 
     st.dataframe(df)
-if st.button("Refresh Table"):
-    gantikan_mobil_rusak()
+st.button("Refresh Table", on_click=gantikan_mobil_rusak())
