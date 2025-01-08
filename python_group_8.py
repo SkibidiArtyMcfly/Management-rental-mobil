@@ -58,31 +58,22 @@ mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to
 
 
 def gantikan_mobil_rusak():
-    # Create an empty list to store the results
-    result_messages = []
-    
-    for rusak in mobil_rusak:
-        rusak_id, rusak_name, tipe_mobil_rusak, _, _, customer_id = rusak
+ for rusak in mobil_rusak:
 
-        # Find replacement vehicle based on matching type and status
+        tipe_mobil_rusak = rusak[2]
+        customer_id = rusak[5]
+
+        # Use numerical indices for 'Status_Mobil' and 'Tipe_Mobil' in the generator expression
         mobil_gantian = next((mobil for mobil in data_mobil if mobil[3] == 1 and mobil[2] == tipe_mobil_rusak), None)
 
-        if mobil_gantian:
-            mobil_gantian_id, mobil_gantian_name, _, _ = mobil_gantian
+        if mobil_gantian != None:
+            print(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
+            print(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
+            df.loc[df['ID_Mobil'] == mobil_gantian[0], ['Status_Mobil', 'Customer_ID']] = [2, customer_id]
+            df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID']] = [4, None]
 
-            # Add status messages to result_messages
-            result_messages.append(f"Mobil yang akan diganti: {rusak_name} (ID: {rusak_id}), Customer ID: {customer_id}, Status: Rusak")
-            result_messages.append(f"Mobil pengganti: {mobil_gantian_name} (ID: {mobil_gantian_id}), Status: Standby\n")
-
-            # Update data frame to reflect the new status for both vehicles
-            df.loc[df['ID_Mobil'] == mobil_gantian_id, ['Status_Mobil', 'Customer_ID']] = [2, customer_id]
-            df.loc[df['ID_Mobil'] == rusak_id, ['Status_Mobil', 'Customer_ID']] = [4, None]
         else:
-            result_messages.append(f"Tidak ada mobil pengganti untuk mobil {rusak_name} (ID: {rusak_id})")
-
-    # Display the result messages in Streamlit
-    for message in result_messages:
-        st.write(message)
+            print("tidak ada mobil pengganti")
 
 # Streamlit button to trigger the function
 if st.button("Gantikan Mobil Rusak"):
