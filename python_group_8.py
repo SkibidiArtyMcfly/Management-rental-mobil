@@ -76,12 +76,13 @@ def gantikan_mobil_rusak():
             print("tidak ada mobil pengganti")
 def skibidi():
     print("skibidi")
+skibidi = '''skibidi()'''
 # Fungsi untuk menampilkan antarmuka Streamlit
 
 st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
 if st.button("Ganti Mobil Rusak"):
-    st.write(skibidi())
+    st.code(skibidi, language="python")
 if st.button("View Mobil"):
     st.dataframe(df)
