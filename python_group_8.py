@@ -75,16 +75,12 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 gantiMobil = '''gantikan_mobil_rusak()'''
-st.code(gantiMobil, language="python")
 # Fungsi untuk menampilkan antarmuka Streamlit
-def main():
-    st.title("Aplikasi Penggantian Mobil Rusak")
+
+st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
-    if st.button("Ganti Mobil Rusak"):
-if __name__ == "__main__":
-    main()
-
-     
+if st.button("Ganti Mobil Rusak"):
+    st.code(gantiMobil, language="python")
 if st.button("View Mobil"):
     st.dataframe(df)
