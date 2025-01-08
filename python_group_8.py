@@ -81,7 +81,7 @@ def main():
 
     # Tombol untuk menjalankan fungsi
     if st.button("Ganti Mobil Rusak"):
-        st.run(gantikan_mobil_rusak())
+        st.run()
 
 if __name__ == "__main__":
     main()
