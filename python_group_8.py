@@ -75,14 +75,15 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 
+st.code(gantiMobil, language="python")
 # Fungsi untuk menampilkan antarmuka Streamlit
 def main():
     st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
     if st.button("Ganti Mobil Rusak"):
-        st.run()
-
+        
+gantiMobil = '''gantikan_mobil_rusak()'''
 if __name__ == "__main__":
     main()
 
