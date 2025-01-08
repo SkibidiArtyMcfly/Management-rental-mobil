@@ -84,4 +84,3 @@ if st.button("View Mobil"):
     gantikan_mobil_rusak()
 if st.button("View Mobil Updated"):
     gantikan_mobil_rusak()
-    st.dataframe(df)
