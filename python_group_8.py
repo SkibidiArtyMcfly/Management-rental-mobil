@@ -81,6 +81,7 @@ st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
 if st.button("View Mobil"):
+    on_click = reset
     st.dataframe(df)
     
 if st.button("View Mobil Updated"):
