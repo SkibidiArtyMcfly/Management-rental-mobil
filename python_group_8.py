@@ -57,7 +57,7 @@ status_mapping = {
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
 
 
-gantiMobil = '''def gantikan_mobil_rusak():
+gantiMobil = def gantikan_mobil_rusak():
                  for rusak in mobil_rusak:
 
                     tipe_mobil_rusak = rusak[2]
@@ -73,7 +73,7 @@ gantiMobil = '''def gantikan_mobil_rusak():
                     df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID']] = [4, None]
 
                     else:
-                        print("tidak ada mobil pengganti")'''
+                        print("tidak ada mobil pengganti")
 
 # Fungsi untuk menampilkan antarmuka Streamlit
 
