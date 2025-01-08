@@ -84,3 +84,4 @@ if st.button("View Mobil"):
 if st.button("View Mobil Updated"):
     gantikan_mobil_rusak()
     st.dataframe(df)
+    st.session_state.df = pd.concat([st.session_state.df, new_data], ignore_index=True)
