@@ -85,7 +85,7 @@ if st.button("View Mobil"):
     st.dataframe(df)
     
 if st.button("View Mobil Updated"):
-    gantikan_mobil_rusak()
     on_click = reset
+    gantikan_mobil_rusak()
     st.dataframe(df)
 
