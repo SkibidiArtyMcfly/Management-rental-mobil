@@ -54,7 +54,7 @@ status_mapping = {
     3: "Rusak",
     4: "Sedang Mekanik"
 }
-df = pd.DataFrame(data_mobil, columns=['ID Mobil', 'Nama Mobil', tipe_mobil_mapping['Tipe Mobil'], 'Status', 'Lokasi', 'Customer ID'])
+df = pd.DataFrame(data_mobil, columns=['ID Mobil', 'Nama Mobil', 'Tipe Mobil', 'Status', 'Lokasi', 'Customer ID'])
 
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
 
