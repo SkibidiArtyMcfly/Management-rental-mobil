@@ -84,5 +84,5 @@ st.title("Aplikasi Penggantian Mobil Rusak")
     # Tombol untuk menjalankan fungsi
 if st.button("Gantikan mobil rusak", type="primary"):
     gantikan_mobil_rusak()
-st.dataframe()
+st.dataframe(df)
 
