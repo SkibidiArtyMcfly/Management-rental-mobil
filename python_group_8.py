@@ -54,7 +54,14 @@ status_mapping = {
     3: "Rusak",
     4: "Sedang Mekanik"
 }
-
+myConfig={
+    'ID_Mobil' : 'ID',
+    'Nama_Mobil' : 'Nama', 
+    'Tipe_Mobil' : 'Tipe', 
+    'Status_Mobil': 'Status', 
+    'Lokasi' : 'Lokasi', 
+    'Customer_ID' : 'Customer ID'
+}
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
 
 
@@ -83,5 +90,5 @@ st.title("Aplikasi Penggantian Mobil Rusak")
     # Tombol untuk menjalankan fungsi
 if st.button("Gantikan mobil rusak", type="primary"):
     gantikan_mobil_rusak()
-st.dataframe(df)
+st.dataframe(df, column_config = myConfig)
 
