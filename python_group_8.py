@@ -85,6 +85,5 @@ st.title("Aplikasi Penggantian Mobil Rusak")
     # Tombol untuk menjalankan fungsi
 if st.button("Gantikan mobil rusak", type="primary"):
     gantikan_mobil_rusak()
-    st.write("mobil telah terupdate, tekanlah refresh table")
 st.table(df.head(st.session_state['data_table']))
 
