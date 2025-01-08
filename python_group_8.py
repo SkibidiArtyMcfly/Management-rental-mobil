@@ -12,6 +12,9 @@ import numpy as np
 import pandas as pd
 import random
 
+if 'data_table' not in st.session_state:
+    st.session_state['data_table'] = 10
+
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
      [3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
@@ -80,12 +83,11 @@ def reset():
 st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
-if st.button("View Mobil"):
-    on_click = reset
-    st.dataframe(df)
-    
-if st.button("View Mobil Updated"):
-    on_click = reset
+increment = st.button('refresh tabel')
+if increment:
+    st.session_state.data_table +=1
+if st.button("Gantikan mobil rusak", type="primary"):
     gantikan_mobil_rusak()
-    st.dataframe(df)
+    st.write("mobil telah terupdate, tekanlah refresh table"
+st.table(df.head(st.session_state['data_table']))
 
