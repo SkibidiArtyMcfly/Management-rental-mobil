@@ -75,13 +75,15 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 # Fungsi untuk menampilkan antarmuka Streamlit
-
+def reset():
+    st.session_state.df = data_mobil   
 st.title("Aplikasi Penggantian Mobil Rusak")
 
     # Tombol untuk menjalankan fungsi
 if st.button("View Mobil"):
     st.dataframe(df)
+    on_click = reset
 if st.button("View Mobil Updated"):
     gantikan_mobil_rusak()
     st.dataframe(df)
-st.session_state.df = data_mobil   
+
