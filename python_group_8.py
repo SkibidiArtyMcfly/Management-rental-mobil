@@ -15,9 +15,9 @@ import random
 if "boolean" not in st.session_state:
     st.session_state.boolean = "False"
 
-#data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
+data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
 
-data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
+'''data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
      [3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
      [4,  "Honda Civic",  3,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
@@ -26,7 +26,7 @@ data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",
      [7,  "Nissan Livina",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
      [8,  "Toyota Innova",  1,  4,  "Jl. Raya Cawang No. 10, Jakarta Timur",  104],
      [9,  "Honda HR-V",  2,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
-     [10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]
+     [10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]'''
 df = pd.DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customer_ID'])
 
 lokasi_mapping = {
