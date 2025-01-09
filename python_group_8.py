@@ -97,8 +97,10 @@ with col2:
 if st.session_state.boolean == True:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 else:
-    st.write("refresh table")
+    st.write("Please refresh table")
 if gantiMobil:
         gantikan_mobil_rusak()
         st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
-        st.session_state.boolean = "True"
+        st.session_state.boolean == True
+if test:
+    st.write("data inputted")
