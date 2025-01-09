@@ -15,7 +15,7 @@ import random
 if "boolean" not in st.session_state:
     st.session_state.boolean = False
 
-data_mobil = pd.read_csv('https://github.com/SkibidiArtyMcfly/Management-rental-mobil/blob/86ace6c13b7e287a209940a0a287a7a8b8c90bf7/data_mobil.csv')
+data_mobil = pd.read_csv('https://github.com/SkibidiArtyMcfly/Management-rental-mobil/blob/86ace6c13b7e287a209940a0a287a7a8b8c90bf7/data_mobil.csv', sep=';')
 
 '''[[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
