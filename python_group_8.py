@@ -90,7 +90,7 @@ col1, col2 =st.columns(2)
 with col1:
     gantiMobil = st.button("Gantikan mobil rusak")
 with col2: 
-    test = st.button("test")
+    test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
     gantikan_mobil_rusak()
