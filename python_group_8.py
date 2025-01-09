@@ -95,12 +95,12 @@ with col2:
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 if st.session_state.boolean == True:
-    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
+    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 elif st.session_state.boolean == False:
     st.write("Please refresh table")
 if gantiMobil:
         gantikan_mobil_rusak()
-        st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
+        st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
         st.session_state.boolean = "True"
 if test:
     st.write("data inputted")
