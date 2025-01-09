@@ -78,7 +78,7 @@ def gantikan_mobil_rusak():
             print(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
             print(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
             df.loc[df['ID_Mobil'] == mobil_gantian[0], ['Status_Mobil', 'Customer_ID', 'Status']] = [2, customer_id, 'Tersewa']
-            df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID']] = [4, None]
+            df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID', 'Status'] = [4, None, 'Sedang Mekanik']
 
         else:
             print("tidak ada mobil pengganti")
