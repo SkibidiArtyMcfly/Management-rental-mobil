@@ -93,10 +93,7 @@ with col2:
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
-    if mobil_rusak != None:
         gantikan_mobil_rusak()
-    elif mobil_rusak == None:
-        st.write("tidak ada mobil rusak")
 if test:
     st.write('test')
 st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
