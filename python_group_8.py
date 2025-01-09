@@ -13,7 +13,7 @@ import pandas as pd
 import random
 
 if "boolean" not in st.session_state:
-    st.session_state.boolean = "False"
+    st.session_state.boolean == False
 
 #data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
 
