@@ -94,7 +94,7 @@ with col1:
 with col2: 
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
-if st.session_state.boolean = True:
+if st.session_state.boolean == True:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 else:
     st.write("refresh table")
