@@ -75,8 +75,6 @@ def gantikan_mobil_rusak():
         mobil_gantian = next((mobil for mobil in data_mobil if mobil[3] == 1 and mobil[2] == tipe_mobil_rusak), None)
 
         if mobil_gantian != None:
-            st.write(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
-            st.write(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
             df.loc[df['ID_Mobil'] == mobil_gantian[0], ['Status_Mobil', 'Customer_ID', 'Status']] = [2, customer_id, 'Tersewa']
             df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID', 'Status']] = [4, None, "Sedang Mekanik"]
 
@@ -96,6 +94,8 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
         gantikan_mobil_rusak()
+            st.write(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
+            st.write(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
         st.session_state.boolean = True
 if st.session_state.boolean == True:
     gantikan_mobil_rusak()
