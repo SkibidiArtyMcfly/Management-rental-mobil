@@ -85,8 +85,6 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 
-gantikan_mobil_rusak()
-gantikan_mobil_rusak()
 # Fungsi untuk menampilkan antarmuka Streamlit
 def reset():
     st.session_state.df = data_mobil   
@@ -102,7 +100,7 @@ if st.session_state.boolean == True:
 elif st.session_state.boolean == False:
     st.write("Please refresh table")
 if gantiMobil:
-        gantikan_mobil_rusak()
+        st.write(gantikan_mobil_rusak(df))
         gantikan_mobil_rusak()
         st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
         st.session_state.boolean = "True"
