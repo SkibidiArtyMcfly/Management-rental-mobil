@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import random
 
-if "counter" in st.session_state:
+if 'counter' not in st.session_state:
     st.session_state.counter == 0
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
