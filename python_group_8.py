@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import random
 
-if 'iteration' not in session_state:
+if 'iteration' not in st.session_state:
     st.session_state['iteration'] = 0
     
 
