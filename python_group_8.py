@@ -27,7 +27,7 @@ data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Man
      [8,  "Toyota Innova",  1,  4,  "Jl. Raya Cawang No. 10, Jakarta Timur",  104],
      [9,  "Honda HR-V",  2,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
      [10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]'''
-df = pd.DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customer_ID'])
+df = pd.DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customere_ID'])
 
 lokasi_mapping = {
     1: "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
@@ -83,7 +83,7 @@ def gantikan_mobil_rusak():
         elif mobil_gantian == None:
             st.write("tidak ada mobil pengganti")
 
-
+gantikan_mobil_rusak()
 # Fungsi untuk menampilkan antarmuka Streamlit
 def reset():
     st.session_state.df = data_mobil   
@@ -99,7 +99,7 @@ if st.session_state.boolean == True:
 elif st.session_state.boolean == False:
     st.write("Please refresh table")
 if gantiMobil:
-        gantikan_mobil_rusak()
+        
         st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
         st.session_state.boolean = "True"
 if test:
