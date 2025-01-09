@@ -11,10 +11,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import random
-
-st.write(st.session_state)
     
-
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
      [3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
@@ -91,9 +88,10 @@ with col1:
 with col2: 
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
-if gantiMobil:
+@st.fragment()
+    if gantiMobil:
         gantikan_mobil_rusak()
-if test:
-    st.write("data inputted")
-st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
+    if test:
+        st.write("data inputted")
+    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 
