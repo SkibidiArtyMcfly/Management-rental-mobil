@@ -88,7 +88,6 @@ with col1:
 with col2: 
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
-@st.fragment()
 if gantiMobil:
     gantikan_mobil_rusak()
 if test:
