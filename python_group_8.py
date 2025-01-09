@@ -94,7 +94,7 @@ STATUS = [
     "Sedang Mekanik"
 ]
 with st.form(key="mobil_baru"):
-        ID_Mobil = st.number_input("ID Mobil")
+        ID_Mobil = st.number_input("ID Mobil", min_value=1, step=1)
         Nama_Mobil = st.text_input("Nama Mobil")
         Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
         Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
