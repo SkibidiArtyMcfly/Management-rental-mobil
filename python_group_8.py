@@ -15,9 +15,9 @@ import random
 if "boolean" not in st.session_state:
     st.session_state.boolean = False
 
-data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
+#data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
 
-df = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
+data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
      [3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
      [4,  "Honda Civic",  3,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
@@ -49,7 +49,7 @@ tipe_mobil_mapping = {
     2: "SUV",
     3: "Sedan"
 }
-#df["Tipe Mobil"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
+df["Tipe Mobil"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
 
 status_mapping = {
     1: "Stand by",
@@ -57,7 +57,7 @@ status_mapping = {
     3: "Rusak",
     4: "Sedang Mekanik"
 }
-#df["Status"] = df.Status_Mobil.map(status_mapping)
+df["Status"] = df.Status_Mobil.map(status_mapping)
 myConfig={
     'ID_Mobil' : 'ID',
     'Nama_Mobil' : 'Nama',  
