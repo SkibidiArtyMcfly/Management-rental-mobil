@@ -85,10 +85,10 @@ with col2:
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
-        #gantikan_mobil_rusak()
+        gantikan_mobil_rusak()
         st.session_state.boolean = True
 if st.session_state.boolean == True:
-    #gantikan_mobil_rusak()
+    gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 else:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
