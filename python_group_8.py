@@ -18,7 +18,7 @@ if "boolean" not in st.session_state:
 @st.cache(allow_output_mutation=True)
 def load_data():
     data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
-    return df
+    return data_mobil
 '''data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
      [3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
