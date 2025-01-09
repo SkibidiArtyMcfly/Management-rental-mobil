@@ -101,6 +101,7 @@ with st.form(key="mobil_baru"):
         Lokasi = st.text_input(lable="Lokasi")
         Customer_ID = st.number_input(lable="Customer ID")
         submit_button = st.form_submit_button(label="Submit")
+    
     if submit_button:
         st.write("Data Inputted")
         
