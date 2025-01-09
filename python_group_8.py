@@ -12,8 +12,6 @@ import numpy as np
 import pandas as pd
 import random
 
-if 'counter' not in st.session_state:
-    st.session_state.counter == 0
 
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
