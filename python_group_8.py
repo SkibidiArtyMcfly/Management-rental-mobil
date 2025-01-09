@@ -13,7 +13,7 @@ import pandas as pd
 import random
 
 if "boolean" not in st.session_state:
-    st.session_state.boolean == False
+    st.session_state.boolean = "False"
 
 #data_mobil = pd.read_csv('https://raw.githubusercontent.com/SkibidiArtyMcfly/Management-rental-mobil/refs/heads/main/data_mobil.csv')
 
@@ -101,7 +101,7 @@ elif st.session_state.boolean == False:
 if gantiMobil:
         gantikan_mobil_rusak()
         st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
-        st.session_state.boolean == True
+        st.session_state.boolean = "True"
 if test:
     st.write("data inputted")
-    st.session_state.boolean == False
+    st.session_state.boolean = "False"
