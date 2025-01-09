@@ -49,7 +49,7 @@ tipe_mobil_mapping = {
     2: "SUV",
     3: "Sedan"
 }
-df["Tipe Mobil"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
+#df["Tipe Mobil"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
 
 status_mapping = {
     1: "Stand by",
