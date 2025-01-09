@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 import random
 
-st.write(session_state)
+st.write(st.session_state)
     
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
