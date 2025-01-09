@@ -12,8 +12,8 @@ import numpy as np
 import pandas as pd
 import random
 
-if int not in st.session_state:
-    st.session_state['key'] = 0
+if "key" not in st.session_state:
+    st.session_state.key = 0
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
@@ -95,14 +95,14 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
         gantikan_mobil_rusak()
-        st.session_state =+ 1
+        st.session_state.key =+ 1
 if test:
     st.write("data inputted")
-    st.session_state =+ 0
-if st.session_state > 0:
+    st.session_state.key =+ 0
+if st.session_state.key > 0:
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-elif st.session_state == 0:
+elif st.session_state.key == 0:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 else:
     st.write("please refresh table")
