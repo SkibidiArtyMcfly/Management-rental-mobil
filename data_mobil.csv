@@ -1,11 +1,10 @@
-ID_Mobil,Nama_Mobil,Tipe_Mobil,Status_Mobil,Lokasi,Customer_ID
-1,Toyota Avanza,1,2,"Jl. Thamrin No. 3, Jakarta Pusat",101.0
-2,Honda CR-V,2,3,"Jl. Raya Cawang No. 10, Jakarta Timur",102.0
-3,Suzuki Ertiga,1,1,"Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
-4,Honda Civic,3,1,"Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
-5,Toyota Fortuner,2,4,"Jl. Merdeka No. 15, Jakarta Barat",
-6,Mitsubishi Xpander,1,2,"Jl. Sunter Agung No. 12, Jakarta Utara",103.0
-7,Nissan Livina,1,1,"Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
-8,Toyota Innova,1,4,"Jl. Raya Cawang No. 10, Jakarta Timur",104.0
-9,Honda HR-V,2,2,"Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
-10,Honda Jazz,3,4,"Jl. Merdeka No. 15, Jakarta Barat",
+[[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
+[2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
+[3,  "Suzuki Ertiga",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
+[4,  "Honda Civic",  3,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
+[5,  "Toyota Fortuner",  2,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None],
+[6,  "Mitsubishi Xpander",  1,  2,  "Jl. Sunter Agung No. 12, Jakarta Utara",  103],
+[7,  "Nissan Livina",  1,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
+[8,  "Toyota Innova",  1,  4,  "Jl. Raya Cawang No. 10, Jakarta Timur",  104],
+[9,  "Honda HR-V",  2,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
+[10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]
