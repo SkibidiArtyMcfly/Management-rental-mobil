@@ -12,9 +12,6 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import random
-
-if 'key' not in st.session_state:
-    st.session_state['key'] = 'value'
     
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
@@ -64,7 +61,8 @@ myConfig={
     'Customer_ID' : 'Customer ID'
 }
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
-
+if 'key' not in st.session_state:
+    st.session_state['key'] = 'value'
 
 def gantikan_mobil_rusak():
  for rusak in mobil_rusak:
