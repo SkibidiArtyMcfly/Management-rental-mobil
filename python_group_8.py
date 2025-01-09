@@ -82,6 +82,40 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 
+TIPE_MOBIL = [
+    "MPV",
+    "SUV",
+    "Sedan"
+]
+STATUS = [
+    "Stand by",
+    "Tersewa",
+    "Rusak",
+    "Sedang Mekanik"
+]
+def form():
+    st.form(key="mobil_baru"):
+        ID_Mobil = st.number_input(lable="ID Mobil")
+        Nama_Mobil = st.text_input(lable="Nama Mobil")
+        Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
+        Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
+        Lokasi = st.text_input(lable="Lokasi")
+        Customer_ID = st.number_input(lable="Customer ID")
+    submit_button = st.form_submit_button(label="Submit")
+
+    if submit_button:
+        st.write("Data Inputted")
+        
+
+
+
+
+
+
+
+
+
+
 # Fungsi untuk menampilkan antarmuka Streamlit  
 st.title("Aplikasi Penggantian Mobil Rusak")
 col1, col2 =st.columns(2)
@@ -94,7 +128,7 @@ if gantiMobil:
     gantikan_mobil_rusak()
     st.session_state.boolean = "True"
 if test:
-    st.write("data inputted")
+    with form()
 if st.session_state.boolean == False:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 else:
