@@ -47,6 +47,7 @@ tipe_mobil_mapping = {
     2: "SUV",
     3: "Sedan"
 }
+df["tipe"] = df.Tipe_Mobil.map(lambda x: random.choice(map_dict[x]))
 
 status_mapping = {
     1: "Stand by",
