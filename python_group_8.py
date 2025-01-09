@@ -95,7 +95,7 @@ with col2:
 if gantiMobil:
     if mobil_rusak != None:
         gantikan_mobil_rusak()
-    else:
+    elif mobil_rusak == None:
         st.write("tidak ada mobil rusak")
 if test:
     st.write('test')
