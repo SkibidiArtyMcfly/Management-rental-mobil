@@ -99,7 +99,7 @@ with st.form(key="mobil_baru"):
         Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
         Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
         Lokasi = st.text_input("Lokasi")
-        Customer_ID = st.number_input("Customer ID")
+        Customer_ID = st.number_input("Customer ID", min_value=1, step=1)
         submit_button = st.form_submit_button("Submit")
     
         if submit_button:
