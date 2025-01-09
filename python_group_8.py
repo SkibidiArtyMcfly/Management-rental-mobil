@@ -102,7 +102,8 @@ if st.session_state.boolean == True:
 elif st.session_state.boolean == False:
     st.write("Please refresh table")
 if gantiMobil:
-        
+        gantikan_mobil_rusak()
+        gantikan_mobil_rusak()
         st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
         st.session_state.boolean = "True"
 if test:
