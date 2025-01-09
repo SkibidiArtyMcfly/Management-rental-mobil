@@ -97,7 +97,7 @@ with col2:
 if gantiMobil:
         gantikan_mobil_rusak()
         st.session_state.boolean = True
-if session_state.boolean == True:
+if st.session_state.boolean == True:
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 else:
