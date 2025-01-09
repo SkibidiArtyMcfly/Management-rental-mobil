@@ -61,8 +61,6 @@ myConfig={
     'Customer_ID' : 'Customer ID'
 }
 mobil_rusak = [mobil for mobil in data_mobil if mobil[3] == 3]  # Use index 3 to access 'Status_Mobil'
-if 'key' not in st.session_state:
-    st.session_state['key'] = 'value'
 
 def gantikan_mobil_rusak():
  for rusak in mobil_rusak:
