@@ -86,9 +86,16 @@ def gantikan_mobil_rusak():
 def reset():
     st.session_state.df = data_mobil   
 st.title("Aplikasi Penggantian Mobil Rusak")
-
+col1, col2 =st.columns(2)
+with col1:
+    gantiMobil = st.button("Gantikan mobil rusak")
+with col2: 
+    test = st.button("test")
     # Tombol untuk menjalankan fungsi
-if st.button("Gantikan mobil rusak", type="primary"):
+if gantiMobil:
     gantikan_mobil_rusak()
+if test:
+    st.write('test')
+if st.button
 st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 
