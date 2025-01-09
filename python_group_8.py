@@ -85,7 +85,7 @@ with col2:
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
-        gantikan_mobil_rusak()
+        #gantikan_mobil_rusak()
         st.session_state.boolean = True
 if st.session_state.boolean == True:
     #gantikan_mobil_rusak()
