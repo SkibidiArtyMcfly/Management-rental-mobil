@@ -10,8 +10,8 @@ Original file is located at
 import streamlit as st
 import numpy as np
 import pandas as pd
-import random
 import seaborn as sns
+import random
 
 if "boolean" not in st.session_state:
     st.session_state.boolean = False
