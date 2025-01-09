@@ -96,7 +96,7 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if st.session_state.boolean == True:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
-else:
+elif st.session_state.boolean == False:
     st.write("Please refresh table")
 if gantiMobil:
         gantikan_mobil_rusak()
