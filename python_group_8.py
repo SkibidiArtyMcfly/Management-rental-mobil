@@ -47,7 +47,7 @@ tipe_mobil_mapping = {
     2: "SUV",
     3: "Sedan"
 }
-df["tipe"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
+df["Tipe Mobil"] = df.Tipe_Mobil.map(tipe_mobil_mapping)
 
 status_mapping = {
     1: "Stand by",
@@ -55,10 +55,10 @@ status_mapping = {
     3: "Rusak",
     4: "Sedang Mekanik"
 }
+df["Status_Mobil"] = df.Status_Mobil.map(status_mapping)
 myConfig={
     'ID_Mobil' : 'ID',
-    'Nama_Mobil' : 'Nama', 
-    'Status_Mobil': 'Status', 
+    'Nama_Mobil' : 'Nama',  
     'Lokasi' : 'Lokasi', 
     'Customer_ID' : 'Customer ID'
 }
@@ -90,5 +90,5 @@ st.title("Aplikasi Penggantian Mobil Rusak")
     # Tombol untuk menjalankan fungsi
 if st.button("Gantikan mobil rusak", type="primary"):
     gantikan_mobil_rusak()
-st.dataframe(df, column_config = myConfig, column_order=['tipe'])
+st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 
