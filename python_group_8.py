@@ -93,16 +93,7 @@ STATUS = [
     "Rusak",
     "Sedang Mekanik"
 ]
-with st.form(key="mobil_baru"):
-        ID_Mobil = st.number_input("ID Mobil", min_value=1, step=1)
-        Nama_Mobil = st.text_input("Nama Mobil")
-        Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
-        Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
-        Lokasi = st.text_input("Lokasi")
-        submit_button = st.form_submit_button("Submit")
-    
-        if submit_button:
-            st.write("Data Inputted")
+
         
 
 
@@ -126,7 +117,16 @@ if gantiMobil:
     gantikan_mobil_rusak()
     st.session_state.boolean = "True"
 if test:
-    st.write("test")
+    with st.form(key="mobil_baru"):
+        ID_Mobil = st.number_input("ID Mobil", min_value=1, step=1)
+        Nama_Mobil = st.text_input("Nama Mobil")
+        Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
+        Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
+        Lokasi = st.text_input("Lokasi")
+        submit_button = st.form_submit_button("Submit")
+    
+        if submit_button:
+            st.write("Data Inputted")
 if st.session_state.boolean == False:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 else:
