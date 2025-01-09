@@ -102,7 +102,7 @@ if test:
 if st.session_state > 0:
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-elif st.session_state = 0:
+elif st.session_state == 0:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 else
     st.write("please refresh table")
