@@ -93,7 +93,7 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
     gantikan_mobil_rusak()
-    st.session_state.boolean = True
+    st.session_state.boolean = "True"
 if test:
     st.write("data inputted")
 st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
