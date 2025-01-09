@@ -13,7 +13,7 @@ import pandas as pd
 import random
 
 if 'data_table' not in st.session_state:
-    st.session_state['data_table'] = 10
+    st.session_state['data_table'] = 0
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
@@ -82,6 +82,8 @@ def gantikan_mobil_rusak():
 
         elif mobil_gantian == None:
             st.write("tidak ada mobil pengganti")
+
+
 # Fungsi untuk menampilkan antarmuka Streamlit
 def reset():
     st.session_state.df = data_mobil   
@@ -95,6 +97,7 @@ with col2:
 if gantiMobil:
         gantikan_mobil_rusak()
 if test:
+    gantikan_mobil_rusak()
     st.write('test')
 st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 
