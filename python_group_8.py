@@ -12,8 +12,8 @@ import numpy as np
 import pandas as pd
 import random
 
-if "counter" not in st.session_state:
-    st.session_state.counter = 0
+if "boolean" not in st.session_state:
+    st.session_state.boolean == False
 
 data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",  101],
      [2,  "Honda CR-V",  2,  3,  "Jl. Raya Cawang No. 10, Jakarta Timur",  102],
@@ -83,9 +83,7 @@ def gantikan_mobil_rusak():
         else:
             print("tidak ada mobil pengganti")
 
-# Fungsi untuk menampilkan antarmuka Streamlit
-def reset():
-    st.session_state.df = data_mobil   
+# Fungsi untuk menampilkan antarmuka Streamlit  
 st.title("Aplikasi Penggantian Mobil Rusak")
 col1, col2 =st.columns(2)
 with col1:
@@ -98,11 +96,5 @@ if gantiMobil:
         st.session_state.counter =+ 1
 if test:
     st.write("data inputted")
-    st.session_state.counter =+ 0
-if st.session_state.counter > 0:
-    gantikan_mobil_rusak()
-    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-elif st.session_state.counter == 0:
-    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-else:
-    st.write("please refresh table")
+st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
+
