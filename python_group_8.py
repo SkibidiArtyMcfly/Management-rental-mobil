@@ -100,8 +100,7 @@ with st.form(key="mobil_baru"):
         Status_Mobil = st.selectbox("Status Mobil", options=STATUS, index=None)
         Lokasi = st.text_input(lable="Lokasi")
         Customer_ID = st.number_input(lable="Customer ID")
-    submit_button = st.form_submit_button(label="Submit")
-
+        submit_button = st.form_submit_button(label="Submit")
     if submit_button:
         st.write("Data Inputted")
         
