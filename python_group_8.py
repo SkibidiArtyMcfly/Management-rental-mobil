@@ -86,6 +86,7 @@ def gantikan_mobil_rusak():
             print("tidak ada mobil pengganti")
 
 gantikan_mobil_rusak()
+gantikan_mobil_rusak()
 # Fungsi untuk menampilkan antarmuka Streamlit
 def reset():
     st.session_state.df = data_mobil   
