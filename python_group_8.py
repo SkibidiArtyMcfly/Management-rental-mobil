@@ -94,8 +94,8 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
         gantikan_mobil_rusak()
-            st.write(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
-            st.write(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
+        st.write(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
+        st.write(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
         st.session_state.boolean = True
 if st.session_state.boolean == True:
     gantikan_mobil_rusak()
