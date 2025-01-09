@@ -75,8 +75,8 @@ def gantikan_mobil_rusak():
         mobil_gantian = next((mobil for mobil in data_mobil if mobil[3] == 1 and mobil[2] == tipe_mobil_rusak), None)
 
         if mobil_gantian != None:
-            st.write(print(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak"))
-            st.write(print(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n"))
+            print(f"Mobil yang akan diganti: {rusak[1]} (ID: {rusak[0]}), Customer ID: {customer_id}, Status: Rusak")
+            print(f"Mobil pengganti: {mobil_gantian[1]} (ID: {mobil_gantian[0]}), Status: Standby\n")
             df.loc[df['ID_Mobil'] == mobil_gantian[0], ['Status_Mobil', 'Customer_ID']] = [2, customer_id]
             df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID']] = [4, None]
 
