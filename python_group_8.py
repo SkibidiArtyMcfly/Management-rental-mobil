@@ -27,7 +27,7 @@ data_mobil = [[1,  "Toyota Avanza",  1,  2,  "Jl. Thamrin No. 3, Jakarta Pusat",
      [8,  "Toyota Innova",  1,  4,  "Jl. Raya Cawang No. 10, Jakarta Timur",  104],
      [9,  "Honda HR-V",  2,  1,  "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",  None],
      [10,  "Honda Jazz",  3,  4,  "Jl. Merdeka No. 15, Jakarta Barat",  None]]
-df = DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customer_ID'])
+df = pd.DataFrame(data_mobil, columns=['ID_Mobil', 'Nama_Mobil', 'Tipe_Mobil', 'Status_Mobil', 'Lokasi', 'Customer_ID'])
 
 lokasi_mapping = {
     1: "Jl. Raya Kebayoran Baru No. 5, Jakarta Selatan",
