@@ -96,6 +96,5 @@ if gantiMobil:
     gantikan_mobil_rusak()
 if test:
     st.write('test')
-if st.button
 st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
 
