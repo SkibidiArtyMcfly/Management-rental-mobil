@@ -89,9 +89,9 @@ with col2:
     test = st.button("Input Data Baru")
     # Tombol untuk menjalankan fungsi
 @st.fragment()
-    if gantiMobil:
-        gantikan_mobil_rusak()
-    if test:
-        st.write("data inputted")
-    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
+if gantiMobil:
+    gantikan_mobil_rusak()
+if test:
+    st.write("data inputted")
+st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 
