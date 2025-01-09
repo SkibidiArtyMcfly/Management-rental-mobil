@@ -89,7 +89,7 @@ if gantiMobil:
         st.session_state.boolean = True
 if st.session_state.boolean == True:
     gantikan_mobil_rusak()
-    st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
+    st.dataframe(df)
 else:
     st.dataframe(df)
 
