@@ -55,7 +55,7 @@ status_mapping = {
     3: "Rusak",
     4: "Sedang Mekanik"
 }
-df["Status_Mobil"] = df.Status_Mobil.map(status_mapping)
+df["Status"] = df.Status_Mobil.map(status_mapping)
 myConfig={
     'ID_Mobil' : 'ID',
     'Nama_Mobil' : 'Nama',  
