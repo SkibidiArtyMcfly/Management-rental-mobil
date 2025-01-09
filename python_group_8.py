@@ -93,8 +93,7 @@ STATUS = [
     "Rusak",
     "Sedang Mekanik"
 ]
-with form():
-    st.form(key="mobil_baru"):
+with st.form(key="mobil_baru"):
         ID_Mobil = st.number_input(lable="ID Mobil")
         Nama_Mobil = st.text_input(lable="Nama Mobil")
         Tipe_Mobil = st.selectbox("Tipe Mobil", options=TIPE_MOBIL, index=None)
