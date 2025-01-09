@@ -96,7 +96,7 @@ with col2:
     # Tombol untuk menjalankan fungsi
 if gantiMobil:
         gantikan_mobil_rusak()
-        session_state.boolean = Not session_state.boolean
+        st.session_state.boolean = True
 if session_state.boolean == True:
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['Nama_Mobil','Tipe Mobil', 'Status', 'Customer_ID'])
