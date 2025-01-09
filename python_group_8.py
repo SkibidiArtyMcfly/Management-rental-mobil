@@ -96,9 +96,9 @@ if gantiMobil:
     st.session_state.boolean = "True"
 if test:
     st.write("data inputted")
-if st.session_state.boolean == False
+if st.session_state.boolean == False:
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-if  st.session_state.boolean == True
+else
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
 
