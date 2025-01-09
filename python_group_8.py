@@ -58,7 +58,6 @@ status_mapping = {
 myConfig={
     'ID_Mobil' : 'ID',
     'Nama_Mobil' : 'Nama', 
-    'Tipe_Mobil' : 'Tipe', 
     'Status_Mobil': 'Status', 
     'Lokasi' : 'Lokasi', 
     'Customer_ID' : 'Customer ID'
