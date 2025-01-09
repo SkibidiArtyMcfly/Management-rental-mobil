@@ -80,7 +80,7 @@ def gantikan_mobil_rusak():
             df.loc[df['ID_Mobil'] == mobil_gantian[0], ['Status_Mobil', 'Customer_ID', 'Status']] = [2, customer_id, 'Tersewa']
             df.loc[df['ID_Mobil'] == rusak[0],['Status_Mobil', 'Customer_ID', 'Status']] = [4, None, "Sedang Mekanik"]
 
-        elif mobil_rusak == None:
+        elif mobil_gantian == None:
             st.write("tidak ada mobil pengganti")
 # Fungsi untuk menampilkan antarmuka Streamlit
 def reset():
