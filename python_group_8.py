@@ -133,5 +133,3 @@ if st.session_state.boolean == False:
 else:
     gantikan_mobil_rusak()
     st.dataframe(df, column_config = myConfig, column_order=['ID_Mobil', 'Nama_Mobil','Tipe Mobil', 'Status_Mobil', 'Customer_ID'])
-
-st.table(data_mobil, columns = ["Penyewa", "No. KTP", "No. Telp", "Jenis Mobil",  "Tanggal Sewa", "Tanggal Kembali"])
